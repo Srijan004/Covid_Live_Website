@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Live Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <style>
+   * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Ubuntu', sans-serif;
+
+        }
+
+
+        body {
+            background-image: url("covidbg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 4px solid purple;
+
+                }
+header{
+    display: flex;
+    flex-direction: row;
+  flex-wrap: wrap;
+    justify-content: space-around;
+}
+button{
+    border-radius: 4px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: honeydew;
+}
+
+
+        .liveData {
+            font-size: 50px;
+            text-align: center;
+            color: red;
+        }
+
+        .mainDiv{
+      /* width: 100vw; */
+      height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .mainDiv h3{
+         margin-bottom: 10px;
+     }
+
+        .globalNumbers {
+            border: 4px solid green;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        h3{
+            margin-top: 30px;
+            text-align: center;
+        }
+
+.myAddress{
+    /* border: 4px solid red; */
+    width: 300px;
+    height: 400px;
+    align-self: center;
+
+}
+        .gloalStats {
+
+            border: 2px solid red;
+            width: 240px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+     .gloalStats span{
+      font-size: 20px;
+     }
+
+     .hcq{
+         width: 100vw;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+     }
+     
+    </style>
+</head>
+
+<body>
+
+    <header class="hcq">
+        <!-- <p class="blnk"></p> -->
+       <a href="liveCovidApp.html"> <button>World Data</button></a>
+          <a href="myLocn.html"><button> Location Data</button></a>
+          <a href="custom.html"><button>Customised data</button>
+          </a>
+          <!-- <p class="blnk"></p> -->
+
+        </header>
+
+        <h3>My Location Covid Data</h3>
+
+         <div class="myAddress">
+             
+         </div>
+
+
+   <div class="mainDiv">
+
+
+    <div class="globalNumbers">
+               
+        <div class="totalConirmed gloalStats">
+            <h3>Total Confirmed Cases</h3>
+            <span class="totConfNum">-</span>
+        </div>
+
+        <div class="totalRecovered gloalStats">
+            <h3>Total Recovered Cases</h3>
+            <span class="totRecNum">-</span>
+        </div>
+
+        <div class="totalDeath gloalStats">
+            <h3>Total Deaths</h3>
+            <span class="totDeathNum">-</span>
+        </div>
+
+        <div class="newConirmed gloalStats">
+            <h3>New Confirmed Cases</h3>
+            <span class="newConfNum">-</span>
+        </div>
+
+        <div class="newRecovered gloalStats">
+            <h3>New Recovered Cases</h3>
+            <span class="newRecNum">-</span>
+        </div>
+
+        <div class="newDeath gloalStats">
+            <h3>New Deaths</h3>
+            <span class="newDeathNum">-</span>
+        </div>
+
+    </div>
+
+   </div>
+    <p>This is state data</p>
+<script src="myLocNew.js"></script>
+</body>
+
+</html>

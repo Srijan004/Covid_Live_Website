@@ -155,7 +155,20 @@ x =final.Confirmed;
         alert("User Denied Geolocation");
     }
     }
-
+    navigator.geolocation.watchPosition(function(position) {
+        console.log("i'm tracking you!");
+      },
+      function(error) {
+        if (error.code == error.PERMISSION_DENIED)
+       {
+    //   alert("USER DENIED GEOLOCATION");
+    
+     document.querySelector(".myAddress").classList.add("newer");  
+     document.querySelector("#myh3").innerText="User Denied Geolocation";
+     
+     
+}
+      });
 
     let latitude0;
     let longitude0;

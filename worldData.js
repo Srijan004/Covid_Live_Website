@@ -115,6 +115,18 @@ for(let i=0;i<arr.length;i++)
       .catch(err => console.log('rejected :', err.message));
 
 
+    //   $(".totalConirmed gloalStats").on(
+    //     {
+    //         mouseleave: function () {
+                
+    //         }
+
+
+
+    //     })
+
+
+
 // Country: "India"
 // CountryCode: "IN"
 // Date: "2021-05-17T08:56:26.124Z"

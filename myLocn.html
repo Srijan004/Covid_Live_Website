@@ -27,7 +27,7 @@
             flex-direction:column;
             align-items: center;
             justify-content: space-evenly;
-            border: 4px solid purple;
+            /* border: 4px solid purple; */
 
                 }
 header{
@@ -65,7 +65,7 @@ button{
      }
 
         .globalNumbers {
-            border: 4px solid green;
+            /* border: 4px solid green; */
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -82,17 +82,22 @@ button{
     width: 300px;
     height: 400px;
     align-self: center;
+    margin-top: 10px;
 
 }
         .gloalStats {
+            background-color: greenyellow;
+            margin: 10px;
 
-            border: 2px solid red;
+            /* border: 2px solid red; */
             width: 240px;
             height: 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+            transition: transform 1s;
+
         }
 
      .gloalStats span{
@@ -105,7 +110,22 @@ button{
          flex-direction: row;
          justify-content: space-evenly;
      }
-     
+     .globalNumbers  :hover {
+        /* background-color:green;
+        transition:.5s; */
+        transform: rotateX(360deg);
+    }   
+.gloalStats :hover{
+    transform: rotateY(0deg);
+
+}
+
+.newer{
+    background-image: url(765.jpg);
+    background-repeat: no-repeat;
+   background-size: cover;
+}
+
     </style>
 </head>
 
@@ -121,11 +141,11 @@ button{
 
         </header>
 
-        <h3>My Location Covid Data</h3>
 
          <div class="myAddress">
-             
          </div>
+
+         <h3 id="myh3">My Location Covid Data</h3>
 
 
    <div class="mainDiv">

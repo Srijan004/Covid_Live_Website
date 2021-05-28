@@ -6,7 +6,9 @@ const getTodos1 = async () =>{
         
         if (response.status !== 200)
         {
+            document.querySelector("#myHeading").innerText="Invalid Country";
             throw new Error('cannot fetch data');
+
         }
     
         const data = await response.json();
@@ -31,10 +33,11 @@ const getTodos1 = async () =>{
           .then((data) => {
     // console.log(data);
     
+    
 let i;
 let arr = [];
 let j=0;
-for(i=data.length - 1; j !== 2 ; i--)
+for(i=data.length - 1; j !== 2 && i>=0; i--)
 {
 
     if(data[i].Province === state)
@@ -45,6 +48,8 @@ j += 1;
 
 }
 
+
+
 final=arr[0];
 init=arr[1];
 // let cnfTot =final.Confirmed - init.Confirmed;
@@ -54,6 +59,17 @@ init=arr[1];
 // New Deaths : ${deathsTot}
 // New Confirmed : ${cnfTot}
 // `;
+
+
+if(final === undefined)
+{
+    document.querySelector("#myHeading").innerText = "Invalid State";   
+}
+
+else{
+    document.querySelector("#myHeading").innerText="Covid data of the above State";
+}
+
 
 let x =final.Deaths ;
 let y = document.querySelector(".totDeathNum");
@@ -108,6 +124,5 @@ y.innerText  = `${x}`;
     });
     
     
-
     
     

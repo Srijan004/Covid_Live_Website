@@ -157,13 +157,14 @@ x =final.Confirmed;
     }
     navigator.geolocation.watchPosition(function(position) {
         console.log("i'm tracking you!");
+        document.querySelector("#myh3").innerText="Covid Data of the above State";
       },
       function(error) {
         if (error.code == error.PERMISSION_DENIED)
        {
     //   alert("USER DENIED GEOLOCATION");
     
-     document.querySelector(".myAddress").classList.add("newer");  
+    //  document.querySelector(".myAddress").classList.add("newer");  
      document.querySelector("#myh3").innerText="User Denied Geolocation";
      
      

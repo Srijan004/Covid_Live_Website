@@ -8,130 +8,16 @@
     <title>Covid Live Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleSheets/userLocationData.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Ubuntu', sans-serif;
-
-        }
-
-
-        body {
-            background-image: url("covidbg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        header {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        button {
-            border-radius: 4px;
-            width: 150px;
-            height: 40px;
-            background-color: black;
-            color: honeydew;
-        }
-
-
-        .liveData {
-            font-size: 50px;
-            text-align: center;
-            color: red;
-        }
-
-        .mainDiv {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mainDiv h3 {
-            margin-bottom: 10px;
-        }
-
-        .globalNumbers {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        h3 {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .myAddress {
-            width: 300px;
-            height: 400px;
-            align-self: center;
-            margin-top: 10px;
-
-        }
-
-        .gloalStats {
-            background-color: greenyellow;
-            margin: 10px;
-
-            width: 240px;
-            height: 80px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            transition: transform 1s;
-
-        }
-
-        .gloalStats span {
-            font-size: 20px;
-        }
-
-        .hcq {
-            width: 100vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
-
-        .globalNumbers :hover {
-
-            transform: rotateX(360deg);
-        }
-
-        .gloalStats :hover {
-            transform: rotateY(0deg);
-
-        }
-
-        .newer {
-            background-image: url("765.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 </head>
 
 <body>
 
     <header class="hcq">
-        <a href="worldData.html"> <button>World Data</button></a>
+        <a href="index.html"> <button>World Data</button></a>
         <a href="userLocationData.html"><button> Location Data</button></a>
-        <a href="searchProvinceData.html"><button>Customised data</button>
+        <a href="searchProvinceData.html"><button>Search Province Data</button>
         </a>
     </header>
 
@@ -181,7 +67,7 @@
 
     </div>
 
-    <script src="userLocationData.js"></script>
+    <script src="Javascripts/userLocationData.js"></script>
 </body>
 
 </html>

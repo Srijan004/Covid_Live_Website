@@ -1,4 +1,5 @@
-const getTodos = async () => {
+//This function fetches the Global Data
+const getGlobalData = async () => {
 
     const response = await fetch('https://api.covid19api.com/summary');
 
@@ -15,15 +16,18 @@ const getTodos = async () => {
 
 };
 
-
+//This is declared for future purpose when
+//country data will also be added.
 let countri = "India";
 
-getTodos()
+getGlobalData()
     .then((data) => {
 
         let globalData = data.Global;
 
 
+        //After Global data is fetched , we feed the
+        //Data in our webpage by targeting respective divs.        
         let num = document.querySelector(".totConfNum");
         num.innerText = `${globalData.TotalConfirmed}`;
 
@@ -43,6 +47,7 @@ getTodos()
         num.innerText = `${globalData.NewDeaths}`;
 
 
+        //For Future Use as mentioned before        
         let arr = data.Countries;
         for (let i = 0; i < arr.length; i++) {
             if (arr[i].Country === countri) {

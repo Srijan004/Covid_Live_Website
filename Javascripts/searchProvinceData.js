@@ -1,8 +1,10 @@
-const getTodos1 = async () => {
+//This function will get the covid data of user entered country
+const getEnteredCountryData = async () => {
 
-    const response = await fetch(`https://api.covid19api.com/live/country/${countri1}`);
+    const response = await fetch(`https://api.covid19api.com/live/country/${enteredCountry}`);
 
     if (response.status !== 200) {
+        //Error Handling in case of Invalid country entered by user
         document.querySelector("#myHeading").innerText = "Invalid Country";
         throw new Error('cannot fetch data');
 
@@ -15,24 +17,33 @@ const getTodos1 = async () => {
 
 };
 
-let state = "Tamil Nadu";
-let countri1 = "India";
 
-let swd = document.querySelector(".sumbiter");
+//Globally declared for
+//accessibility over whole code
+let state;
+let enteredCountry;
 
-swd.addEventListener("click", () => {
+//we target submit button
+let submitButton = document.querySelector(".sumbiter");
+
+//this event listener will get the user entered values 
+//and get the data of entered data and then  we will put
+//the data on website
+submitButton.addEventListener("click", () => {
     state = document.querySelector(".userState").value;
-    countri1 = document.querySelector(".userCountry").value;
+    enteredCountry = document.querySelector(".userCountry").value;
 
 
-    getTodos1()
+    getEnteredCountryData()
         .then((data) => {
-            console.log(data);
+            //Error Handling in case of Invalid country entered by user
             if (data.length == 0) {
                 document.querySelector("#myHeading").innerText = "Invalid Country";
                 return;
             }
 
+
+            //Search province from country data            
             let i;
             let arr = [];
             let j = 0;
@@ -50,6 +61,7 @@ swd.addEventListener("click", () => {
             final = arr[0];
             init = arr[1];
 
+            //Error handling in case of invalid state entered by user                
             if (final === undefined) {
                 document.querySelector("#myHeading").innerText = "Invalid State";
             }
@@ -58,7 +70,7 @@ swd.addEventListener("click", () => {
                 document.querySelector("#myHeading").innerText = "Covid data of the above State";
             }
 
-
+            //We enter the data we got ; into our website
             let x = final.Deaths;
             let y = document.querySelector(".totDeathNum");
             y.innerText = `${x}`;
